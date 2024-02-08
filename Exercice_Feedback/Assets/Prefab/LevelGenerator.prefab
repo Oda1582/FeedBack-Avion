@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1178209236477313903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178209236477313901}
+  - component: {fileID: 1178209236477313900}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1178209236477313901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178209236477313903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.278168, y: 3.2066154, z: 3.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178209236477313900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178209236477313903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57b4a53baa54374295fe1300c6cc913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TxtLimit: {fileID: 2800000, guid: 07171c384896bf14bb99ada0e3d4f2cd, type: 3}
+  TxtWalls: {fileID: 2800000, guid: 7f883c1c1fde9944b9c3560f37f211e3, type: 3}
+  TxtObstacles: {fileID: 2800000, guid: 11142fbbea1c91a42b5f8a2588a1d8e4, type: 3}
+  TxtEnnemys: {fileID: 2800000, guid: 286d0cb51762fd44eb2cee3ee4c1e961, type: 3}
+  TxtScraps: {fileID: 2800000, guid: 1b08292e14997654db27e60780359101, type: 3}
+  TxtLvlgenerator:
+  - {fileID: 2800000, guid: 8b04d2ed098650f4ab92f94b3e0ec650, type: 3}
+  - {fileID: 2800000, guid: 1ecfc301fcb2d3749b63c3264199d6fc, type: 3}
+  - {fileID: 2800000, guid: a9ef7dd4492974344822450b7228eb84, type: 3}
+  - {fileID: 2800000, guid: 5db382e9cabcea14faf08633ca7e3958, type: 3}
+  - {fileID: 2800000, guid: e48873639e8eb3f4fbfe794a4006c2b3, type: 3}
+  - {fileID: 2800000, guid: c2d76d56059fa7a418162f15fd791944, type: 3}
+  - {fileID: 2800000, guid: 349431a4bca56e64f94118c415c477b4, type: 3}
+  gWall: {fileID: 0}
+  gEnnemy: {fileID: 0}
+  gObstacle: {fileID: 0}
+  gScrap: {fileID: 0}
