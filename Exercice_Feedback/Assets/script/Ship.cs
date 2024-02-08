@@ -126,6 +126,7 @@ public class Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Debug.Log(Gamepad.current);
         healthBar.SetEnergy(Energy);
         Movement();
         // Debug.Log("Time.time : " + Time.time);
@@ -609,23 +610,69 @@ private void ChargeShoot()
     }
     public void HitHealthHaptic()
     {
-        Gamepad.current.SetMotorSpeeds(0.5f, 0.5f);
+        if (Gamepad.current != null)
+        {   
+            // If it's a gamepad, set motor speeds
+            Gamepad.current.SetMotorSpeeds(0.5f, 0.5f);
+        }
+        else
+        {
+            // If it's not a gamepad, do nothing or handle keyboard input differently
+            Debug.LogWarning("ShootHaptic function called but no gamepad connected.");
+        }
     }
         public void HitShieldHaptic()
     {
-        Gamepad.current.SetMotorSpeeds(0.3f, 0.3f);
+        if (Gamepad.current != null)
+        {
+            // If it's a gamepad, set motor speeds
+            Gamepad.current.SetMotorSpeeds(0.3f, 0.3f);
+        }
+        else
+        {
+            // If it's not a gamepad, do nothing or handle keyboard input differently
+            Debug.LogWarning("ShootHaptic function called but no gamepad connected.");
+        }
     }
         public void ShootHaptic()
     {
-        Gamepad.current.SetMotorSpeeds(0.2f, 0.2f);
+        // Check if the current input device is a gamepad
+        if (Gamepad.current != null)
+        {
+            // If it's a gamepad, set motor speeds
+            Gamepad.current.SetMotorSpeeds(0.2f, 0.2f);
+        }
+        else
+        {
+            // If it's not a gamepad, do nothing or handle keyboard input differently
+            Debug.LogWarning("ShootHaptic function called but no gamepad connected.");
+        }    
     }
         public void ChargedShootHaptic()
     {
-        Gamepad.current.SetMotorSpeeds(1f, 1f);
+        if (Gamepad.current != null)
+        {   
+            // If it's a gamepad, set motor speeds
+            Gamepad.current.SetMotorSpeeds(1f, 1f);
+        }
+        else
+        {
+            // If it's not a gamepad, do nothing or handle keyboard input differently
+            Debug.LogWarning("ShootHaptic function called but no gamepad connected.");
+        }
     }
         public void DeathHaptic()
     {
-        Gamepad.current.SetMotorSpeeds(1f, 1f);
+        if (Gamepad.current != null)
+        {   
+            // If it's a gamepad, set motor speeds
+            Gamepad.current.SetMotorSpeeds(1f, 1f);
+        }
+        else
+        {
+            // If it's not a gamepad, do nothing or handle keyboard input differently
+            Debug.LogWarning("ShootHaptic function called but no gamepad connected.");
+        }
     }
     public void ResetHaptics()
     {
