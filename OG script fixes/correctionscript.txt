@@ -1,0 +1,46 @@
+private void ChargeShoot()
+    {
+        float pourcentcharge = currentCharge/currentWeapon1.ChargeTime;
+        if(Energy >= currentWeapon1.energyconsumption*pourcentcharge )
+        {
+            GameObject newbullet = Instantiate(bullet);
+            newbullet.transform.position = ship.transform.position + (ship.transform.forward * 8);
+            newbullet.GetComponent<bullet>().ActiveChargedBullet(this.transform.forward, this.gameObject, Mathf.RoundToInt(currentWeapon1.Damage * pourcentcharge), Mathf.RoundToInt(currentWeapon1.CHargeSpeedMultiplier * pourcentcharge), Mathf.RoundToInt(currentWeapon1.ChargeSizeMultiplier * pourcentcharge)); ;
+
+            Energy -= currentWeapon1.energyconsumption*pourcentcharge;
+        }
+
+        currentCharge = 0;
+        MaxCharge = false;
+        bChargingWeapon = false;
+
+    }
+
+
+public void ActiveChargedBullet(Vector3 direction, GameObject emmiter, int dmg, float spd,float size)
+    {
+        bActivebullet = true;
+        Emmiter = emmiter;
+        this.transform.forward = direction;
+        damage = dmg;
+        speed = 100 * spd;
+        if(speed<75)
+        {
+            speed = 75;
+        }
+        if(size <1)
+        {
+            size = 1;
+        }
+
+        this.gameObject.transform.localScale = Vector3.one * size;
+        
+
+
+        rb = this.GetComponent<Rigidbody>();
+        if (bActivebullet)
+        {
+            rb.velocity = this.transform.forward * speed;
+        }
+
+    }
