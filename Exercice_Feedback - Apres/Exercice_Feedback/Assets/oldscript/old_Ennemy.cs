@@ -10,7 +10,7 @@ public class old_Ennemy : MonoBehaviour
     GameObject Player;
     float NextShoot1Time = -10;
     public GameObject bullet;
-    public weapon currentWeapon;
+    public old_weapon currentWeapon;
     void Start()
     {
         life = 25;

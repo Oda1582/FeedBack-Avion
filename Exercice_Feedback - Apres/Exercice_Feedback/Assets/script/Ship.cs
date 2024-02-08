@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ship : MonoBehaviour
 {
@@ -348,6 +349,10 @@ public class Ship : MonoBehaviour
     {
         Vector2 Mvt2 = Value.ReadValue<Vector2>();
         InputMove2 = Mvt2;
+    }
+    public void OnChangeMap()
+    {
+        SceneManager.LoadScene("OldScene");
     }
     private void Movement()
     {

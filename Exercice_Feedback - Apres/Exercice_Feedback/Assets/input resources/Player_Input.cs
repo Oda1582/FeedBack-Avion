@@ -98,6 +98,15 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Change Map"",
+                    ""type"": ""Button"",
+                    ""id"": ""d2b5796c-f6c7-46be-b874-4486a1fa6bf8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -126,7 +135,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""d6d93e07-c214-4ac6-a388-70568989cd2b"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -137,7 +146,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""866f1da8-518c-49ca-9e61-857685cc9f38"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -148,7 +157,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""38b3286b-bc96-4dbc-b801-0c79cdc0e00e"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -159,7 +168,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""14b46264-80e4-4d87-858c-fb615080146f"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -181,7 +190,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""89776e70-5318-4a94-82ba-c30f04b28fe5"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -234,9 +243,53 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""clockwise Rotation"",
+                    ""id"": ""0d49dab8-1922-4177-9fee-eb84c918b88c"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""41e34ce0-912b-4a64-8247-d3bebb886b01"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""a6af2054-a1a1-432f-a125-3651266f5b6f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""509b88e8-2e24-43c7-b986-dd746203d7bf"",
                     ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Accelerate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ebff298d-34fb-4f43-8d99-7ed4393d1603"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -257,8 +310,30 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""be0767bc-75e2-4979-9db0-dba18303e375"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Decelerate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44a56245-a26b-41e0-99b1-071c67ed9da3"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Death"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""8006ffa9-05df-4445-9cd9-deca60a8b108"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -298,6 +373,61 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                     ""action"": ""ChangeWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""427eeada-34e5-4a83-b245-2f3fa37bfdd9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""aa6c1a5c-5258-4920-ad9a-c4be08f88729"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""b1774707-ac2f-4888-a8b5-99d380d039a6"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f61ce5f-15ec-49a2-97f5-c4d9a2e0c0d8"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Change Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f681182e-b8d5-4b21-8583-6ab0681976e7"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Change Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -331,6 +461,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         m_Ship_Decelerate = m_Ship.FindAction("Decelerate", throwIfNotFound: true);
         m_Ship_Death = m_Ship.FindAction("Death", throwIfNotFound: true);
         m_Ship_ChangeWeapon = m_Ship.FindAction("ChangeWeapon", throwIfNotFound: true);
+        m_Ship_ChangeMap = m_Ship.FindAction("Change Map", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -398,6 +529,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
     private readonly InputAction m_Ship_Decelerate;
     private readonly InputAction m_Ship_Death;
     private readonly InputAction m_Ship_ChangeWeapon;
+    private readonly InputAction m_Ship_ChangeMap;
     public struct ShipActions
     {
         private @Player_Input m_Wrapper;
@@ -410,6 +542,7 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         public InputAction @Decelerate => m_Wrapper.m_Ship_Decelerate;
         public InputAction @Death => m_Wrapper.m_Ship_Death;
         public InputAction @ChangeWeapon => m_Wrapper.m_Ship_ChangeWeapon;
+        public InputAction @ChangeMap => m_Wrapper.m_Ship_ChangeMap;
         public InputActionMap Get() { return m_Wrapper.m_Ship; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -443,6 +576,9 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 @ChangeWeapon.started -= m_Wrapper.m_ShipActionsCallbackInterface.OnChangeWeapon;
                 @ChangeWeapon.performed -= m_Wrapper.m_ShipActionsCallbackInterface.OnChangeWeapon;
                 @ChangeWeapon.canceled -= m_Wrapper.m_ShipActionsCallbackInterface.OnChangeWeapon;
+                @ChangeMap.started -= m_Wrapper.m_ShipActionsCallbackInterface.OnChangeMap;
+                @ChangeMap.performed -= m_Wrapper.m_ShipActionsCallbackInterface.OnChangeMap;
+                @ChangeMap.canceled -= m_Wrapper.m_ShipActionsCallbackInterface.OnChangeMap;
             }
             m_Wrapper.m_ShipActionsCallbackInterface = instance;
             if (instance != null)
@@ -471,6 +607,9 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
                 @ChangeWeapon.started += instance.OnChangeWeapon;
                 @ChangeWeapon.performed += instance.OnChangeWeapon;
                 @ChangeWeapon.canceled += instance.OnChangeWeapon;
+                @ChangeMap.started += instance.OnChangeMap;
+                @ChangeMap.performed += instance.OnChangeMap;
+                @ChangeMap.canceled += instance.OnChangeMap;
             }
         }
     }
@@ -494,5 +633,6 @@ public partial class @Player_Input : IInputActionCollection2, IDisposable
         void OnDecelerate(InputAction.CallbackContext context);
         void OnDeath(InputAction.CallbackContext context);
         void OnChangeWeapon(InputAction.CallbackContext context);
+        void OnChangeMap(InputAction.CallbackContext context);
     }
 }

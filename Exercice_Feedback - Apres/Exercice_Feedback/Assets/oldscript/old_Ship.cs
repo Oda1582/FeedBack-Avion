@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public class old_Ship : MonoBehaviour
 {
@@ -61,11 +63,11 @@ public class old_Ship : MonoBehaviour
     float currentCharge = 0;
     bool MaxCharge = false;
 
-    weapon currentWeapon1;
+    old_weapon currentWeapon1;
     int indexcrtweapon = 0;
     //weapon currentWeapon2;
 
-    public List<weapon> shipweapons;// = new List<weapon>();
+    public List<old_weapon> shipweapons;// = new List<weapon>();
 
 
     Rigidbody rbShip;
@@ -96,12 +98,12 @@ public class old_Ship : MonoBehaviour
     {
         Movement();
 
-        if(currentWeapon1.type==WeaponType.Classic)
+        if(currentWeapon1.type==old_WeaponType.Classic)
         {
             //currentWeapon1.PrintInfo();
             Shoot();
 
-        }else if(currentWeapon1.type == WeaponType.Charged && bChargingWeapon )
+        }else if(currentWeapon1.type == old_WeaponType.Charged && bChargingWeapon )
         {
             currentCharge += Time.deltaTime;
             if(currentCharge>currentWeapon1.ChargeTime)
@@ -169,7 +171,7 @@ public class old_Ship : MonoBehaviour
         if (Value.ReadValue<float>() > 0f)
         {
             bShoot1 = true;
-            if(currentWeapon1.type == WeaponType.Charged)
+            if(currentWeapon1.type == old_WeaponType.Charged)
             {
                 bChargingWeapon = true;
             }
@@ -177,7 +179,7 @@ public class old_Ship : MonoBehaviour
         else if (Value.ReadValue<float>() == 0f)
         {
             bShoot1 = false;
-            if (currentWeapon1.type == WeaponType.Charged)
+            if (currentWeapon1.type == old_WeaponType.Charged)
             {
                 bChargingWeapon = false;
                 ChargeShoot();
@@ -241,6 +243,10 @@ public class old_Ship : MonoBehaviour
     {
         Vector2 Mvt2 = Value.ReadValue<Vector2>();
         InputMove2 = Mvt2;
+    }
+    public void OnChangeMap()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
     private void Movement()
     {
